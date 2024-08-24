@@ -12,5 +12,5 @@ FROM python:3.9
 
 WORKDIR /usr/src/app
 COPY ./book_catalog ./book_catalog
-RUN pip install -r requirements.txt
+RUN pip install -r ./book_catalog/requirements.txt
 CMD uvicorn main:app --host 0.0.0.0 --port $PORT
